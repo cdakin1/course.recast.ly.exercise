@@ -5,6 +5,7 @@ class App extends React.Component {
       currentVideo: null,
       videos: []
     };
+    console.log('app', this);
     this.getYouTube = this.getYouTube.bind(this);
   }
 
@@ -23,7 +24,7 @@ class App extends React.Component {
 
   render() {
     return (<div>
-      <Nav />
+      <Nav getYouTube={this.getYouTube}/>
       <div className="col-md-7">
         <VideoPlayer video={this.state.currentVideo}/>
       </div>
