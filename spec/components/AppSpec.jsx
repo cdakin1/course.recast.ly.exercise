@@ -19,6 +19,7 @@ describe('App', function() {
   });
 
   it('should render a single VideoPlayer component', function() {
+    console.log('THIS IS THE TEST THAT IS FAILING');
     var videoPlayer = findRenderedDOMComponentWithClass(app, 'video-player');
     expect(videoPlayer).to.exist;
   });
@@ -46,7 +47,7 @@ describe('App', function() {
     });
   });
 
-  xdescribe('when rendering live data from YouTube', function() {
+  describe('when rendering live data from YouTube', function() {
     var searchYouTubeStub;
 
     beforeEach(function() {

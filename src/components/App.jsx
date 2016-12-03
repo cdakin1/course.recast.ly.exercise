@@ -3,14 +3,22 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentVideo: null,
-      videos: null
+      videos: []
     };
+    this.getYouTube = this.getYouTube.bind(this);
+  }
 
-    this.data = window.searchYouTube({key: window.YOUTUBE_API_KEY, query: 'cats', max: 5}, function(data) {
-      console.log('data', data);
-      return data;
+  componentDidMount() {
+    this.getYouTube('cats');
+  }
+
+  getYouTube (searchString) {
+    this.props.searchYouTube({key: window.YOUTUBE_API_KEY, query: searchString, max: 5}, data => {
+      this.setState({
+        currentVideo: data[0],
+        videos: data
+      });
     });
-    console.log(this);
   }
 
   render() {

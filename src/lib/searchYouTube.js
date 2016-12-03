@@ -7,9 +7,9 @@ var searchYouTube = (options, callback) => {
     type: 'video',
     videoEmbeddable: 'true'
   }).done(data => {
-    console.log(data.items);
+    console.log('data', data.items);
     callback(data.items);
-  });
+  }).fail(error => console.log(error));
 };
 
 window.searchYouTube = searchYouTube;
