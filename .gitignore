@@ -9,4 +9,8 @@ compiled/
 
 ## API keys ##
 src/config/youtube.js
+<<<<<<< HEAD
 compiled/src/config/youtube.js
+=======
+compiled/config/youtube.js
+>>>>>>> first commit

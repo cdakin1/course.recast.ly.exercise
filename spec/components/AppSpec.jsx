@@ -19,7 +19,10 @@ describe('App', function() {
   });
 
   it('should render a single VideoPlayer component', function() {
+<<<<<<< HEAD
     console.log('THIS IS THE TEST THAT IS FAILING');
+=======
+>>>>>>> first commit
     var videoPlayer = findRenderedDOMComponentWithClass(app, 'video-player');
     expect(videoPlayer).to.exist;
   });
@@ -47,7 +50,11 @@ describe('App', function() {
     });
   });
 
+<<<<<<< HEAD
   describe('when rendering live data from YouTube', function() {
+=======
+  xdescribe('when rendering live data from YouTube', function() {
+>>>>>>> first commit
     var searchYouTubeStub;
 
     beforeEach(function() {

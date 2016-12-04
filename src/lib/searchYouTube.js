@@ -11,5 +11,4 @@ var searchYouTube = (options, callback) => {
     callback(data.items);
   }).fail(error => console.log(error));
 };
-
 window.searchYouTube = searchYouTube;

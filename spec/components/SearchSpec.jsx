@@ -7,8 +7,13 @@ describe ('Search', function() {
   } = React.addons.TestUtils;
 
   var app, searchYouTubeStub;
+<<<<<<< HEAD
 
   describe('when rendering live data from YouTube', function() {
+=======
+  
+  xdescribe('when rendering live data from YouTube', function() {
+>>>>>>> first commit
     beforeEach(function() {
       searchYouTubeStub = sinon.stub();
       searchYouTubeStub.onCall(0).yields(window.fakeVideoData);
@@ -25,7 +30,11 @@ describe ('Search', function() {
         expect(videoEntryTitle.innerHTML).to.equal(fakeVideoData[i].snippet.title);
       });
     });
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> first commit
     it('should update the video list when typing into the input box', function() {
       var videoEntryTitleElements = scryRenderedDOMComponentsWithClass(app, 'video-list-entry-title');
       videoEntryTitleElements.forEach((videoEntryTitle, i) => {
